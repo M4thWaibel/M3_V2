@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M3 Engenharia e Construções - Especialistas em serviços de engenharia e construção civil.">
+    <meta name="keywords" content="engenharia, construção, obras, projetos, M3">
+    <meta name="author" content="M3 Engenharia e Construções">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>M3 Engenharia e Construções</title>
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="../../styles/details.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../index.html">
+                    <img src="../../img/logo.png" alt="M3 Engenharia e Construções">
+                </a>
+            </div>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../sobre.html">Quem somos?</a></li>
+                <li><a href="../obras.html">Obras Realizadas</a></li>
+                <li><a href="../servicos.html">Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <a href="https://wa.me/5515996697107" id="whatsapp-button" target="_blank">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi9JREFUSEvN1UnITnEUBvDfx8JMdoREiChThg1JmVI2hqIUiTInZcGGYiE2xpQSxUKxUJJZSCFiY0ghsjKkKGS+R+f7ent77/vafPWd1e3e8z/P/zznOc9t0srR1Mr1tQmAsViAyRiCX7iFO7iAB/VYqNdBPxzGDHzOQk/wDaMxEj2wG1vwvRZQGUDc9Bo6YAOO40+NAmsT4AXm4VF1Ti2AXriXVEzF8wZCGFF0dAbtMBxfKvNrAZzDeIzDy4KmPuiGp3WAAuQ+jmBlPYBJuIFlmTwsu3mHASU0NdfbjB2YjkvNL6s72Iel6FkM7kfR7ibszOQY9sU6XXRKMQRdc8sAHuI15mTCKhzI5wA+2mAecT5iVBnAm4L/mMGKTOidc/iIkO3PBgCHsAjdywCe5bAWVhQKKe7FQaxpMIegcz06lgGcT/4nVN30ZG5z8BuAnZOuUM2pomh0GBF5YzC4DGB7DrYv3laAtC+A92A1PvHPw0K6EbvyTOzBe5zG8jKAgblY24qErTX4npZ0Dc1vvzEzZRncn0hraVFbrUULJYShhcmVRdAQg3yVIuiPuwivmlJ5qBqgS/IZ+7CxgWKaP0fxywkY2x8yb4lqgNk4W9C0GNF+bOXtYouP4WsVYMxpCdalssK3Gprd/hxkc604MCit+HrSEa4aXjUxk27m9tc0xeoOwkMi8SquFJL8UNhx1+Jm84sfzCyEfMNGHqdnhUSD+9JoE7/M/5x17bRW7+Av0jpxGTt6Zt0AAAAASUVORK5CYII="/>
+    </a>
+
+    <main>
+      <section class="obra-detalhes">
+        <!-- Nome da obra -->
+        <h1 class="obra-nome">Obra 1 - Galpão Industrial</h1>
+        
+        <!-- Local da obra -->
+        <p class="obra-local"><span class="destacar">Local:</span> Sorocaba - SP</p>
+        
+        <!-- Status da obra (use a classe "finalizada" ou "andamento") -->
+        <p class="obra-status finalizada"><span class="destacar">Status:</span> Finalizada</p>
+        
+        <!-- Descrição da obra -->
+        <p class="obra-descricao">
+          <span class="destacar">Descrição: </span> Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Vestibulum in neque et nisl dapibus 
+          semper non non nulla. Praesent varius tortor vitae lacus pulvinar, 
+          a venenatis libero sollicitudin.Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Vestibulum in neque et nisl dapibus 
+          semper non non nulla. Praesent varius tortor vitae lacus pulvinar, 
+          a venenatis libero sollicitudin.Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Vestibulum in neque et nisl dapibus 
+          semper non non nulla. Praesent varius tortor vitae lacus pulvinar, 
+          a venenatis libero sollicitudin.Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Vestibulum in neque et nisl dapibus 
+          semper non non nulla. Praesent varius tortor vitae lacus pulvinar, 
+          a venenatis libero sollicitudin.Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Vestibulum in neque et nisl dapibus 
+          semper non non nulla. Praesent varius tortor vitae lacus pulvinar, 
+          a venenatis libero sollicitudin.
+        </p>
+
+        <!-- Grid de 4 imagens -->
+        <div class="obra-galeria">
+          <img src="../../img/obra1.png" alt="Imagem 1 da obra" onclick="openImageModal(this)">
+          <img src="../../img/Estrutura Metálica1.png" alt="Imagem 2 da obra" onclick="openImageModal(this)">
+          <img src="../../img/obra1.png" alt="Imagem 3 da obra" onclick="openImageModal(this)">
+          <img src="../../img/Estrutura Metálica1.png" alt="Imagem 4 da obra" onclick="openImageModal(this)">
+        </div>
+      </section>
+    </main>
+    <div id="imageModal" class="modal" onclick="closeImageModal()">
+      <span class="close" onclick="closeImageModal()">&times;</span>
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem ampliada">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://maps.app.goo.gl/dY3r7yFHqMMgvQ9G9">Rod. Mal. Rondon (Br-273), km179 </a>
+        <p>&copy; 2025 M3 Engenharia e Construções. Todos os direitos reservados.</p>
+    </footer>   
+    
+    <script src="../../script/script.js"></script>
+
+</body>
+
+<a href="javascript:history.back()" class="back-arrow">
+    &#8592;
+  </a>
+
+</html>

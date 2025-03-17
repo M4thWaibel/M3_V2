@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* Definição de variáveis no :root */
+:root {
+    --primary-font: 'Arial', sans-serif;
+    --primary-color: #2c3e50; /* Cor escura para o cabeçalho e rodapé */
+    --secondary-color: #ecf0f1; /* Cor clara para o texto */
+    --highlight-color: #3498db; /* Cor de destaque nos links */
+    --cta-color: #e67e22; /* Cor do botão de chamada à ação */
+    --cta-hover-color: #d35400; /* Cor do botão no hover */
+    --background-color: #f4f4f4; /* Cor do fundo */
+    --white-color: #ffffff; /* Cor para seções de fundo claro */
+
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(82, 60%, 28%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(0, 0%, 100%);
+}
+/* Seção de Obras Realizadas */
+
+.container h1{
+    margin-bottom: 1.25rem;
+}
+
+.card__article{
+    flex: 1 1 calc(33.333% - 1.25rem);
+    max-width: calc(33.333% - 1.25rem);
+}
+
+.obras__card {
+    background-color: var(--container-color);
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.obras__card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Imagem no Card */
+.obras__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.obras__info {
+    padding: 1.5rem;
+}
+
+.obras__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--title-color);
+}
+
+.obras__location {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.obras__icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cta-color);
+    color: var(--white-color);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.obras__icon:hover {
+    background-color: var(--cta-hover-color);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.modal__content {
+    background-color: var(--white-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+.modal__images img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .obras__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .obras__container {
+        grid-template-columns: 1fr;
+    }
+}
